@@ -1,7 +1,7 @@
 import time
 
 
-def Timer(func):
+def timer(func):
     def trigger(*args):
         start = time.time()
 
