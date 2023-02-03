@@ -1,6 +1,6 @@
 from CodeKit import timer
 from CodeKit import builder
-from CodeKit.to_string import to_string
+from CodeKit import to_string
 
 
 @timer
@@ -9,7 +9,7 @@ def time_test(args):
         print(str(i))
 
 
-time_test(999)
+time_test(args=999)
 
 
 @builder
