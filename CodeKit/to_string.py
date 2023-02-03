@@ -1,6 +1,6 @@
 def to_string(cls):
     """
-    to_string will overwrite the __str__ and
+    to_string will overwrite the __str__ function and format all attributes.
     :param cls: origin class
     """
 
