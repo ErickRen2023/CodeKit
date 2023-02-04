@@ -4,6 +4,12 @@ A useful library for python,inspired by Lombok.
 
 Codekit provides functions and decorators to assist developers in coding.
 
+Version: 0.2
+
+```bash
+pip install codekit
+```
+
 ## Call in coding
 
 ### @timer
