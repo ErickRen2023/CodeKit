@@ -27,7 +27,7 @@ def time_test(args):
 time_test(args=999)
 ```
 
-```bash
+```
 ...
 998
 Run time -> 0.004030704498291016s
@@ -50,7 +50,7 @@ test_class = TestClass(name="ErickRen", age=19, school="TYUT")
 print([attr for attr in dir(test_class) if not attr.startswith('__')])
 ```
 
-```bash
+```
 ['age', 'name', 'school']
 ```
 
@@ -73,7 +73,7 @@ test_class = TestClass(name="ErickRen", age=19, school="TYUT")
 print(test_class)
 ```
 
-```bash
+```
 {age=19, name=ErickRen, school=TYUT}
 ```
 
@@ -95,7 +95,7 @@ def exception_test(var: int):
 exception_test(0)
 ```
 
-```bash
+```
 function run.
 division by zero
 ```
