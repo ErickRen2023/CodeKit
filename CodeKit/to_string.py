@@ -19,5 +19,6 @@ def to_string(cls):
         result += "}"
         return result
 
+    # Overwrite the __str__ magic method.
     cls.__str__ = __str__
     return cls
