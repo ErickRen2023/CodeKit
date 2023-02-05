@@ -76,3 +76,26 @@ print(test_class)
 ```bash
 {age=19, name=ErickRen, school=TYUT}
 ```
+
+### @ignore_exception
+
+ignore_exception provide a decorator that can only print the exception information when the decorated function raise exception.
+
+```python
+from CodeKit import ignore_exception
+
+@ignore_exception
+
+def exception_test(var: int):
+    print("function run.")
+    result = 1 / var
+    print("raise exception")
+    return result
+
+exception_test(0)
+```
+
+```bash
+function run.
+division by zero
+```
