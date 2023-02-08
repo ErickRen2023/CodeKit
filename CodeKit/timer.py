@@ -3,7 +3,7 @@ import time
 
 def timer(func):
     """
-    Timer will calculate the run time of the decorated function and print run time in the Console.
+    timer will calculate the run time of the decorated function and print run time in the Console.
     :param func: decorated function
     """
     def trigger(*args, **kwargs):
