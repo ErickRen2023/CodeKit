@@ -5,7 +5,7 @@ with open("readme.rst", "r") as f:
 
 setuptools.setup(
     name="CodeKit",
-    version="0.2",
+    version="0.3",
     author="ErickRen",
     author_email="erickren2022@outlook.com",
     description="Codekit provides functions and decorators to assist developers in coding.",
