@@ -99,3 +99,69 @@ exception_test(0)
 function run.
 division by zero
 ```
+
+@retry
+
+retry will automatically run the decorated function when the function raise exception.
+
+```python
+from CodeKit import retry
+
+@retry(10, ZeroDivisionError, 0.5)
+def run():
+    print("function run.")
+    return 1 / 0
+```
+
+```
+function run.
+function run.
+function run.
+function run.
+function run.
+function run.
+function run.
+function run.
+function run.
+Traceback (most recent call last):
+  File "D:\WorkSpace\CodeKit\CodeKit\retry.py", line 32, in <module>
+    run()
+  File "D:\WorkSpace\CodeKit\CodeKit\retry.py", line 17, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\WorkSpace\CodeKit\CodeKit\retry.py", line 30, in run
+    return 1 / 0
+           ~~^~~
+ZeroDivisionError: division by zero
+function run.
+```
+
+It can be mixed with ignore_exception.
+
+```python
+from CodeKit import ignore_exception, retry
+
+@ignore_exception
+@retry(10, ZeroDivisionError, 0.5)
+def exception_test(var: int):
+    print("function run.")
+    result = 1 / var
+    print("raise exception")
+    return result
+
+exception_test(0)
+```
+
+```
+function run.
+function run.
+function run.
+function run.
+function run.
+function run.
+function run.
+function run.
+function run.
+function run.
+division by zero
+```

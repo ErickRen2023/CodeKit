@@ -2,6 +2,7 @@ from CodeKit import timer
 from CodeKit import builder
 from CodeKit import to_string
 from CodeKit import ignore_exception
+from CodeKit import retry
 
 
 @timer
@@ -26,6 +27,7 @@ print(test_class)
 
 
 @ignore_exception
+@retry(10, ZeroDivisionError, 0.5)
 def exception_test(var: int):
     print("function run.")
     result = 1 / var
