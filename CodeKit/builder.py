@@ -1,6 +1,6 @@
 def builder(cls):
     """
-    Builder decorator will add all defined parameters in the constructor to the class's attributes.
+    builder decorator will add all defined parameters in the constructor to the class's attributes.
     Builder's __init__ will run after the class's __init__ function.
     :param cls: origin class
     """
