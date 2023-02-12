@@ -1,8 +1,4 @@
-from CodeKit import timer
-from CodeKit import builder
-from CodeKit import to_string
-from CodeKit import ignore_exception
-from CodeKit import retry
+from CodeKit import timer, builder, to_string, ignore_exception, retry, deduplicate
 
 
 @timer
@@ -36,3 +32,9 @@ def exception_test(var: int):
 
 
 exception_test(0)
+
+
+test_num = [1, 1, 2, 3, 4, 5, 6, 7, 7, 8, 9, 10]
+test_letter = ["a", "a", "b", "c", "d", "d", "d", 1, 1, 2]
+print(deduplicate(test_num, reverse=True))
+print(deduplicate(test_letter, reverse=True))

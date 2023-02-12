@@ -153,3 +153,22 @@ function run.
 function run.
 division by zero
 ```
+
+
+### deduplicate
+
+Safely remove the duplicate parts in the array.It will not disturb the original sequence of the array.
+
+```python
+from CodeKit import deduplicate
+
+test_num = [1, 1, 2, 3, 4, 5, 6, 7, 7, 8, 9, 10]
+test_letter = ["a", "a", "b", "c", "d", "d", "d", 1, 1, 2]
+print(deduplicate(test_num, reverse=True))
+print(deduplicate(test_letter, reverse=True))
+```
+
+```
+[10, 9, 8, 7, 6, 5, 4, 3, 2, 1]
+[2, 1, 'd', 'c', 'b', 'a']
+```
