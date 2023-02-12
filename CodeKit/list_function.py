@@ -4,6 +4,9 @@ def deduplicate(array, reverse=False):
     :param array: target array
     :param reverse: Reverse or not
     """
+    if array == list():
+        return list()
+
     result = list()
     if reverse:
         array = reversed(array)
